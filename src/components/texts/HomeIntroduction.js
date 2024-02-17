@@ -6,14 +6,14 @@ const HomeIntroduction = () => {
         fontSize: "26px",
         alignItems: "center",
         margin: "5%",
-        overflowY: "auto"
+        overflow: "auto"
     }
 
     const mobileStyle = {
         fontSize: "14px",
         alignItems: "center",
         margin: "5%",
-        overflowY: "auto"
+        overflow: "auto"
     }
 
     return(

@@ -29,6 +29,7 @@ const Home = () => {
         justifyContent: "space-between",
         width: "100vw",
         paddingTop: "10%",
+        overflow: "auto"
     }
 
     const mobileParent = {
@@ -36,7 +37,8 @@ const Home = () => {
         flexDirection: 'column',
         alignItems: 'center',
         width: "100vw",
-        paddingTop: "40%"
+        paddingTop: "40%",
+        overflow: "auto"
       };
       
 
@@ -62,7 +64,7 @@ const Home = () => {
 
     const containerStyle = {
         height: "100vh",
-        overflowY: "auto"
+        overflow: "auto"
     }
 
     return(
