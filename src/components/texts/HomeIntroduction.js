@@ -5,13 +5,15 @@ const HomeIntroduction = () => {
     const desktopStyle = {
         fontSize: "26px",
         alignItems: "center",
-        margin: "5%"
+        margin: "5%",
+        overflowY: "auto"
     }
 
     const mobileStyle = {
         fontSize: "14px",
         alignItems: "center",
-        margin: "5%"
+        margin: "5%",
+        overflowY: "auto"
     }
 
     return(
