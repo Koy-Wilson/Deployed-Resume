@@ -1,0 +1,118 @@
+@import url("./assets/fonts/Pixelify_Sans/fonts.css");
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-navbar: rgb(0, 0, 0);
+  --color-button-bg: rgb(26, 26, 26);
+  --color-border: rgba(13, 49, 148, 0.568);
+  --color-accent: rgb(190, 29, 29);
+  --color-pink: #f890e7;
+  --color-trans-gray: rgba(0, 0, 0, 0.3);
+  --color-pacman: linear-gradient(45deg, #000000, #fb0007, #d58540, #fda941, #ffff0b, #22ff06, #21ffff, #3ba6ff, #1700ff, #d6d5ff);
+  --color-terraria: linear-gradient(45deg, #311c37, #49345f, #848b9b, #bebebe, #2d0625, #690f2f, #be1c1c, #f05735, #551313, #b93518, #eb6923, #ffa743);
+  --color-ou: linear-gradient(45deg, #9e1b32 0%, #9e1b32 25%, #820e1f 25%, #820e1f 50%, #c03f4d 50%, #c03f4d 75%, #ffffff 75%, #ffffff 100%);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: 'Pixelify';
+  background: var(--color-ou);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+.card {
+  padding: 2em;
+}
+
+#app {
+  margin: 0 auto;
+  height: 100%;
+  text-align: center;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid #ff926400;
+  padding: 0.6em 1.2em;
+  margin-right: 8px;
+  margin-left: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #9e1b32;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.sunset {
+  background: rgb(146,12,24);
+  background: linear-gradient(0deg, rgba(146,12,24,1) 0%, rgba(254,28,3,1) 40%, rgba(251,112,14,1) 69%, rgba(247,196,24,1) 100%); 
+  border-color:  rgb(146,12,24); 
+}
+
+.button-group {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.button-group button {
+  display: flex;
+  border-radius: 0;
+}
+
+.button-group button:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.button-group button:first-child {
+  border-radius: 8px 0 0 8px;
+}
