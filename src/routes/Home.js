@@ -4,6 +4,7 @@ import Image from "../components/Image";
 import Photo from "../assets/images/Home Photo.JPG"
 import HomeIntroduction from "../components/texts/HomeIntroduction";
 import ContactMe from "../components/ContactMe";
+import { isMobile } from "react-device-detect";
 
 const Home = () => {
     const [showLeftChild, setShowLeftChild] = useState(false);
@@ -23,12 +24,21 @@ const Home = () => {
         border: "4px solid black",
     }
 
-    const parent = {
+    const desktopParent = {
         display: "flex",
         justifyContent: "space-between",
         width: "100vw",
         paddingTop: "10%",
     }
+
+    const mobileParent = {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        width: "100vw",
+        paddingTop: "40%"
+      };
+      
 
     const leftChild = {
         width: "100%",
@@ -50,12 +60,17 @@ const Home = () => {
         marginLeft: "5%",
     }
 
+    const containerStyle = {
+        height: "100vh",
+        overflowY: "auto"
+    }
+
     return(
-        <div> 
+        <div style={containerStyle}> 
             <NavBar 
                 page={"Home"}
             />
-            <div style={parent}>
+            <div style={isMobile ? mobileParent : desktopParent}>
                 <div style={leftChild}>
                     <HomeIntroduction />
                 </div>

@@ -2,9 +2,10 @@ import React from "react";
 import Envelope from "../assets/images/Envelope.png";
 import Image from "./Image";
 import Phone from "../assets/images/Phone.png";
+import { isMobile } from "react-device-detect";
 
 const ContactMe = () => {
-    const background = {
+    const desktopBackground = {
         position: "fixed",
         bottom: "0",
         left: "50%",
@@ -17,6 +18,20 @@ const ContactMe = () => {
         borderRadius: "8px 8px 0 0",
         width: "75%"
     };
+
+    const mobileBackground = {
+        position: "fixed",
+        bottom: "0",
+        left: "50%",
+        transform: "translateX(-50%)",
+        display: "flex",
+        justifyContent: "spaceBetween",
+        backgroundColor: "var(--color-navbar)",
+        padding: "10px 10px",
+        margin: "0 auto",
+        borderRadius: "8px 8px 0 0",
+        width: "100%"
+    }
 
     const imageStyle = {
         width: "100%",
@@ -42,10 +57,11 @@ const ContactMe = () => {
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
+        margin: "0"
     }
 
     return(
-        <div style={background}>
+        <div style={isMobile ? mobileBackground : desktopBackground}>
             <div style={parent}>
                 <div style={Object.assign({}, child, { marginRight: "5%" })}>
                     <Image

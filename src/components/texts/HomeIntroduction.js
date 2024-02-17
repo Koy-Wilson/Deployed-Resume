@@ -1,8 +1,21 @@
 import React from "react";
+import { isMobile } from "react-device-detect";
 
 const HomeIntroduction = () => {
+    const desktopStyle = {
+        fontSize: "26px",
+        alignItems: "center",
+        margin: "5%"
+    }
+
+    const mobileStyle = {
+        fontSize: "14px",
+        alignItems: "center",
+        margin: "5%"
+    }
+
     return(
-        <p style={{fontSize: "26px", alignItems: "center", margin: "5%"}}>
+        <p style={isMobile ? mobileStyle : desktopStyle}>
             Hello there!<br />
 
             Welcome to my resume website. 

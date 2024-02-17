@@ -5,6 +5,7 @@ import GitHub from "../assets/images/github.jpg";
 import GitLab from "../assets/images/gitlab.jpg";
 import LinkedIn from "../assets/images/linkedin.jpg";
 import Instagram from "../assets/images/instagram.jpg";
+import { isMobile } from "react-device-detect";
 
 const NavBar = ({ page }) => {
     const imageStyle = {
@@ -33,7 +34,7 @@ const NavBar = ({ page }) => {
         objectFit: "contain",
     };
 
-    const background = {
+    const desktopBackground = {
         position: "fixed",
         top: "0",
         left: "50%",
@@ -46,6 +47,20 @@ const NavBar = ({ page }) => {
         borderRadius: "0 0 8px 8px",
         width: "75%"
     };
+
+    const mobileBackground = {
+        position: "fixed",
+        top: "0",
+        left: "50%",
+        transform: "translateX(-50%)",
+        display: "flex",
+        justifyContent: "spaceBetween",
+        backgroundColor: "var(--color-navbar)",
+        padding: "10px 10px",
+        margin: "0 auto",
+        borderRadius: "0 0 8px 8px",
+        width: "100%"
+    }
 
     const rightLinks = {
         display: "flex",
@@ -70,7 +85,7 @@ const NavBar = ({ page }) => {
     };
 
     return(
-        <div style={background}>
+        <div style={isMobile ? mobileBackground : desktopBackground}>
             <div style={leftLinks}>
                 <a 
                     style={anchorStyle}

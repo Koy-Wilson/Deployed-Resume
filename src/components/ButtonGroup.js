@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonLink from "./ButtonLink";
+import { isMobile } from "react-device-detect";
 
 const ButtonGroup = ({ page }) => {
     const pages = [ 
@@ -30,8 +31,14 @@ const ButtonGroup = ({ page }) => {
         }
     ];
 
+    const mobileButtons = {
+        display: 'flex', 
+        gap: '5px',
+        overflowX: "auto"
+    }
+
     return (
-        <div>
+        <div style={isMobile ? mobileButtons : {}}>
             {pages.map(option => (
                 <ButtonLink
                     key={option.page}
