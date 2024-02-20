@@ -38,6 +38,7 @@ const Home = () => {
         alignItems: 'center',
         width: "100vw",
         paddingTop: "35%",
+        overflowY: "auto"
       };
       
 
