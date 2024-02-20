@@ -102,7 +102,7 @@ const NavBar = ({ page }) => {
                 </a>
                 <a 
                     style={anchorStyle}
-                    href="https://https://gitlab.com/Koy-Wilson" 
+                    href="https://gitlab.com/Koy-Wilson" 
                     rel="noreferrer" 
                     target="_blank"
                     onMouseEnter={handleHover}
