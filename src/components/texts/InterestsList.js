@@ -40,7 +40,7 @@ const InterestsList = () => {
     alignItems: 'center',
     width: '100vw',
     paddingTop: "20%",
-    paddingBottom: "20%",
+    paddingBottom: "25%",
   }
 
   const textHolder = {
