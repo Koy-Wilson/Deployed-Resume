@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { isMobile } from "react-device-detect";
 
 const ExperienceList = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,12 +27,21 @@ const ExperienceList = () => {
     };
   }, []);
 
-  const parent = {
+  const desktopParent = {
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
     gap: "10px",
     padding: "10%",
   };
+
+  const mobileParent = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '100vw',
+    paddingTop: "20%",
+    paddingBottom: "20%",
+  }
 
   const textHolder = {
     background: "white",
@@ -48,7 +58,7 @@ const ExperienceList = () => {
 
   const paragraph = {
     textAlign: "left",
-    fontSize: "20px",
+    fontSize: isMobile ? "14px" : "20px",
     marginLeft: "5%",
     marginRight: "5%",
   };
@@ -64,12 +74,13 @@ const ExperienceList = () => {
   };
 
   const header = {
+    fontSize: isMobile ? "20px" : '',
     marginBottom: "-10px"
   }
 
   return (
     <div style={containerStyle} ref={parentRef}>
-      <div style={parent}>
+      <div style={isMobile ? mobileParent : desktopParent}>
         <div style={textHolder}>
             <h1 style={header}>William Kerber Scholar : OU</h1>
             <h2 style={header}>August 2023-Present</h2>

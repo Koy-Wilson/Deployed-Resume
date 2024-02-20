@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { isMobile } from "react-device-detect";
 
 const AccomplishmentList = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,12 +27,21 @@ const AccomplishmentList = () => {
     };
   }, []);
 
-  const parent = {
+  const desktopParent = {
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
     gap: "10px",
     padding: "10%",
   };
+
+  const mobileParent = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '100vw',
+    paddingTop: "20%",
+    paddingBottom: "20%",
+  }
 
   const textHolder = {
     background: "white",
@@ -48,7 +58,7 @@ const AccomplishmentList = () => {
 
   const paragraph = {
     textAlign: "left",
-    fontSize: "20px",
+    fontSize: isMobile ? "14px" : "20px",
     marginLeft: "5%",
     marginRight: "5%",
   };
@@ -64,12 +74,13 @@ const AccomplishmentList = () => {
   };
 
   const header = {
+    fontSize: isMobile ? "20px" : '',
     marginBottom: "-10px"
   }
 
   return (
     <div style={containerStyle} ref={parentRef}>
-      <div style={parent}>
+      <div style={isMobile ? mobileParent : desktopParent}>
         <div style={textHolder}>
           <h1 style={header}>President's Honor Roll: Fall 2023</h1>
           <p style={paragraph}>
@@ -81,8 +92,8 @@ const AccomplishmentList = () => {
             Among the courses I undertook during this period were Mentored Research Experience, Data Networks, Capstone, and Parallel Distributed Networking Programming.
           </p>
         </div>
-        <div />
-        <div />
+        {!isMobile && <div />}
+        {!isMobile && <div />}
         <div style={textHolder}>
           <h1 style={header}>Intern MVP: Paycom</h1>
           <p style={paragraph}>
@@ -106,8 +117,8 @@ const AccomplishmentList = () => {
             Applied Statistical Methods, Blockchains & Cryptocurrencies, Computer Security, Algorithm Analysis, and Theory of Computation.
           </p>
         </div>
-        <div />
-        <div />
+        {!isMobile && <div />}
+        {!isMobile && <div />}
         <div style={textHolder}>
           <h1 style={header}>President's Honor Roll: Fall 2022</h1>
           <p style={paragraph}>
@@ -134,8 +145,8 @@ const AccomplishmentList = () => {
             These courses have enhanced my cognitive abilities, with many of the concepts proving invaluable in interviews and personal projects.
           </p>
         </div>
-        <div />
-        <div />
+        {!isMobile && <div />}
+        {!isMobile && <div />}
         <div style={textHolder}>
           <h1 style={header}>President's Honor Roll: Spring 2021</h1>
           <p style={paragraph}>
@@ -158,8 +169,8 @@ const AccomplishmentList = () => {
             demonstrating resilience and commitment to academic excellence.
           </p>
         </div>
-        <div />
-        <div />
+        {!isMobile && <div />}
+        {!isMobile && <div />}
         <div style={textHolder}>
           <h1 style={header}>Distinguished Scholar: University of Oklahoma</h1>
           <p style={paragraph}>

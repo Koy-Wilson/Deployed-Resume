@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { isMobile } from "react-device-detect";
 
 const InterestsList = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,12 +27,21 @@ const InterestsList = () => {
     };
   }, []);
 
-  const parent = {
+  const desktopParent = {
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
     gap: "10px",
     padding: "10%",
   };
+
+  const mobileParent = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '100vw',
+    paddingTop: "20%",
+    paddingBottom: "20%",
+  }
 
   const textHolder = {
     background: "white",
@@ -64,12 +74,13 @@ const InterestsList = () => {
   };
 
   const header = {
+    fontSize: isMobile ? "20px" : '',
     marginBottom: "-10px"
   }
 
   return (
     <div style={containerStyle} ref={parentRef}>
-      <div style={parent}>
+      <div style={isMobile ? mobileParent : desktopParent}>
         <div style={textHolder}>
             <h1 style={header}>Back-End Interests</h1>
             <p style={paragraph}>
