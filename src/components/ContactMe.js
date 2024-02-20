@@ -4,6 +4,7 @@ import Image from "./Image";
 import Phone from "../assets/images/Phone.png";
 import { isMobile } from "react-device-detect";
 import Resume from "../assets/Resume.pdf";
+import ResumeImage from "../assets/images/Resume.png"
 
 const ContactMe = () => {
     const desktopBackground = {
@@ -50,7 +51,6 @@ const ContactMe = () => {
 
     const resumeLink = {
         display: "flex",
-        justifyContent: "spaceBetween",
         padding: "10px 20px",
         margin: "0 auto",
         alignItems: "center",
@@ -59,7 +59,7 @@ const ContactMe = () => {
     }
 
     const child = {
-        width: "100%",
+        width: "50%",
         border: "4px solid black",
         color: "black",
         borderRadius: "10px",
@@ -104,7 +104,10 @@ const ContactMe = () => {
                         onMouseEnter={handleHover}
                         onMouseLeave={handleHoverOut}
                     >
-                        Resume
+                        <Image
+                            style={imageStyle}
+                            file={ResumeImage}
+                        />
                     </a>
                 </div>
                 <div style={Object.assign({}, child, {})}>
