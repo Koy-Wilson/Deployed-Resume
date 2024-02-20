@@ -37,14 +37,13 @@ const Home = () => {
         flexDirection: 'column',
         alignItems: 'center',
         width: "100vw",
-        paddingTop: "40%",
-        overflow: "auto"
+        paddingTop: "35%",
       };
       
 
     const leftChild = {
         width: "100%",
-        marginLeft: "5%",
+        marginLeft: isMobile ? "" : "5%",
         transition: "transform 1s ease-in-out",
         transform: showLeftChild ? "translateX(0)" : "translateX(-100vw)",
         background: "white",
@@ -62,13 +61,8 @@ const Home = () => {
         marginLeft: "5%",
     }
 
-    const containerStyle = {
-        height: "100vh",
-        overflow: "auto"
-    }
-
     return(
-        <div style={containerStyle}> 
+        <div> 
             <NavBar 
                 page={"Home"}
             />

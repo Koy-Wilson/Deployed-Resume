@@ -59,7 +59,8 @@ const NavBar = ({ page }) => {
         padding: "10px 10px",
         margin: "0 auto",
         borderRadius: "0 0 8px 8px",
-        width: "100%"
+        width: "100%",
+        overflowX: "auto",
     }
 
     const rightLinks = {

@@ -3,6 +3,7 @@ import Envelope from "../assets/images/Envelope.png";
 import Image from "./Image";
 import Phone from "../assets/images/Phone.png";
 import { isMobile } from "react-device-detect";
+import Resume from "../assets/Resume.pdf";
 
 const ContactMe = () => {
     const desktopBackground = {
@@ -47,6 +48,16 @@ const ContactMe = () => {
         width: "100vw",
     }
 
+    const resumeLink = {
+        display: "flex",
+        justifyContent: "spaceBetween",
+        padding: "10px 20px",
+        margin: "0 auto",
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: "0 0 8px 8px"
+    }
+
     const child = {
         width: "100%",
         border: "4px solid black",
@@ -60,22 +71,47 @@ const ContactMe = () => {
         margin: "0"
     }
 
+    const handleHover = (e) => {
+        e.target.style.transform = "scale(1.5)";
+    };
+
+    const handleHoverOut = (e) => {
+        e.target.style.transform = "scale(1)";
+    };
+
+    const text = {
+        fontSize: isMobile ? "8px" : "16px",
+        marginLeft: "2.5%",
+        marginRight: "2.5%",
+    }
+
     return(
         <div style={isMobile ? mobileBackground : desktopBackground}>
             <div style={parent}>
-                <div style={Object.assign({}, child, { marginRight: "5%" })}>
+                <div style={Object.assign({}, child, {})}>
                     <Image
                         style={imageStyle}
                         file={Envelope} />
-                    <p style={{fontSize: "16px", marginLeft: "2.5%", marginRight: "2.5%"}}>
+                    <p style={text}>
                         koyman41@gmail.com
                     </p>
                 </div>
-                <div style={Object.assign({}, child, { marginLeft: "5%" })}>
+                <div style={resumeLink}>
+                    <a 
+                        href={Resume}
+                        rel="noreferrer"
+                        target="_blank"
+                        onMouseEnter={handleHover}
+                        onMouseLeave={handleHoverOut}
+                    >
+                        Resume
+                    </a>
+                </div>
+                <div style={Object.assign({}, child, {})}>
                     <Image
                         style={imageStyle}
                         file={Phone} />
-                    <p style={{fontSize: "16px", marginLeft: "2.5%", marginRight: "2.5%"}}>
+                    <p style={text}>
                         +1-(405)-919-2090
                     </p>
                 </div>

@@ -71,6 +71,21 @@ const ProjectsLists = () => {
     <div style={containerStyle} ref={parentRef}>
       <div style={parent}>
         <div style={textHolder}>
+          <h1 style={header}>koywilson.com</h1>
+          <p style={paragraph}>
+            <span style={tab} />
+            Began development on this website in early February 2024. <br />
+            <span style={tab} />
+            Crafted the entire site manually utilizing the React framework to delve into front-end development authentically. <br />
+            <span style={tab} />
+            With the exception of the font choice, every element you encounter was personally created. <br />
+            <span style={tab} />
+            No external libraries like MaterialUI were employed; all components, icons, and styling were meticulously crafted by me.
+          </p>
+        </div>
+        <div />
+        <div />
+        <div style={textHolder}>
           <h1 style={header}>Internet of Pings</h1>
           <p style={paragraph}>
             <span style={tab} />
@@ -85,8 +100,6 @@ const ProjectsLists = () => {
             With additional time, we envisioned enhancing its dynamism by enabling node manipulation and incorporating animations to depict packet movement within the network.
           </p>
         </div>
-        <div />
-        <div />
         <div style={textHolder}>
             <h1 style={header}>BetGenius</h1>
             <p style={paragraph}>
@@ -99,6 +112,8 @@ const ProjectsLists = () => {
                 Presently, we're focused on experimenting with predictive techniques to anticipate these statistics for individual players in forthcoming matches.
             </p>
         </div>
+        <div />
+        <div />
         <div style={textHolder}>
             <h1 style={header}>Event Planning App</h1>
             <p style={paragraph}>
@@ -114,8 +129,6 @@ const ProjectsLists = () => {
                 Recruiters benefited from the app's functionalities, enabling them to conveniently invite users, schedule events, and access vital information on the go.
             </p>
         </div>
-        <div />
-        <div />
         <div style={textHolder}>
           <h1 style={header}>Distributed Cart Pole AI</h1>
           <p style={paragraph}>
@@ -129,6 +142,8 @@ const ProjectsLists = () => {
             Upon completing calculations, we transmitted the results back to the master machine to maintain a record of total successes.
           </p>
         </div>
+        <div />
+        <div />
         <div style={textHolder}>
           <h1 style={header}>SoKK Asset Manager</h1>
           <p style={paragraph}>
@@ -140,8 +155,6 @@ const ProjectsLists = () => {
             In a corporate setting, this system could automatically update inventory levels upon purchases and notify managers when products reach low quantities.
           </p>
         </div>
-        <div />
-        <div />
         <div style={textHolder}>
           <h1 style={header}>Candidate Finder</h1>
           <p style={paragraph}>
@@ -157,6 +170,8 @@ const ProjectsLists = () => {
             Initially, the process took approximately 20 hours to complete, but through optimization, we managed to reduce it to around 3 hours.
           </p>
         </div>
+        <div />
+        <div />
       </div>
     </div>
   );
