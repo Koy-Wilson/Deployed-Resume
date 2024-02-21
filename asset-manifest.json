@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.80731c74.css",
-    "main.js": "/static/js/main.667d148b.js",
+    "main.css": "/static/css/main.01df09d0.css",
+    "main.js": "/static/js/main.309ae84e.js",
     "static/js/592.40da80dc.chunk.js": "/static/js/592.40da80dc.chunk.js",
     "static/media/Home Photo.JPG": "/static/media/Home Photo.3b8e197b54e19a6a944c.JPG",
-    "static/media/PixelifySans-VariableFont_wght.ttf": "/static/media/PixelifySans-VariableFont_wght.088d140132e39b3c37a8.ttf",
     "static/media/Resume.pdf": "/static/media/Resume.14e3bb47ede239445c6c.pdf",
+    "static/media/MinecraftRegular.otf": "/static/media/MinecraftRegular.82ba08919dc2add9422f.otf",
     "index.html": "/index.html",
-    "main.80731c74.css.map": "/static/css/main.80731c74.css.map",
-    "main.667d148b.js.map": "/static/js/main.667d148b.js.map",
+    "main.01df09d0.css.map": "/static/css/main.01df09d0.css.map",
+    "main.309ae84e.js.map": "/static/js/main.309ae84e.js.map",
     "592.40da80dc.chunk.js.map": "/static/js/592.40da80dc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.80731c74.css",
-    "static/js/main.667d148b.js"
+    "static/css/main.01df09d0.css",
+    "static/js/main.309ae84e.js"
   ]
 }
