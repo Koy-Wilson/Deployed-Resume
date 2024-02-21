@@ -88,7 +88,7 @@ const ContactMe = () => {
                         href={Resume}
                         rel="noreferrer"
                         target="_blank"
-                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseEnter={() => setIsHovered(!isMobile)}
                         onMouseLeave={() => setIsHovered(false)}
                         style={{ transition: "transform 0.3s ease-in-out", transform: isHovered ? 'scale(1.5)' : 'scale(1)'}}
                     >
