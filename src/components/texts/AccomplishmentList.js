@@ -45,7 +45,7 @@ const AccomplishmentList = () => {
     alignItems: 'center',
     width: '100vw',
     marginTop: "35%",
-    marginBottom: "25%"
+    marginBottom: "40%",
   }
 
   const textHolder = {
