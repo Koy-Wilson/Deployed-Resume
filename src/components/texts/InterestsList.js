@@ -85,10 +85,10 @@ const InterestsList = () => {
             <h1 style={header}>Back-End Interests</h1>
             <p style={paragraph}>
                 <span style={tab} />
-                I embarked on my journey in back-end development, investing the bulk of my early programming years in this domain. <br />
+                I embarked on my journey in back-end development, investing the bulk of my early programming years in this domain. <br /> <br />
                 <span style={tab} />
                 One of my initial projects involved a personal passion project aimed at financial tracking, 
-                employing Java and terminal inputs. <br />
+                employing Java and terminal inputs. <br /> <br />
                 <span style={tab} />
                 My skill set encompasses a range of languages, such as JavaScript with Node.js, Python with Django, 
                 C# for API development using .NET, MySQL for database management, and fundamental C for networking purposes.
@@ -100,9 +100,9 @@ const InterestsList = () => {
             <h1 style={header}>Front-End Interests</h1>
             <p style={paragraph}>
                 <span style={tab} />
-                In recent years, I've acquired numerous skills in front-end development. <br />
+                In recent years, I've acquired numerous skills in front-end development. <br /> <br />
                 <span style={tab} />
-                During my software engineering course, I undertook the challenge of constructing a front-end, marking my initial foray into this realm. <br />
+                During my software engineering course, I undertook the challenge of constructing a front-end, marking my initial foray into this realm. <br /> <br />
                 <span style={tab} />
                 Subsequently, I've honed my expertise in front-end web development through React and Svelte, delved into mobile front-end development via SwiftUI,
                 and explored game development using C# within Unity's game engine.
@@ -112,13 +112,13 @@ const InterestsList = () => {
             <h1 style={header}>Technical Interests</h1>
             <p style={paragraph}>
                 <span style={tab} />
-                Through my involvement in various projects, I've identified my preferred areas of focus. <br />
+                Through my involvement in various projects, I've identified my preferred areas of focus. <br /> <br />
                 <span style={tab} />
-                Although I haven't had the chance to delve into system design or architecture roles in a corporate setting, I've found immense satisfaction in exploring concepts like data networks and rate limiting. <br />
+                Although I haven't had the chance to delve into system design or architecture roles in a corporate setting, I've found immense satisfaction in exploring concepts like data networks and rate limiting. <br /> <br />
                 <span style={tab} />
-                Additionally, I've developed nearly four fully functional parallelized web scrapers and take pleasure in leveraging data science principles to extract valuable insights. <br />
+                Additionally, I've developed nearly four fully functional parallelized web scrapers and take pleasure in leveraging data science principles to extract valuable insights. <br /> <br />
                 <span style={tab} />
-                Recently, I've embarked on learning SwiftUI to craft mobile applications, and I'm fascinated by topics like KeyChain in iOS systems and facial recognition. <br />
+                Recently, I've embarked on learning SwiftUI to craft mobile applications, and I'm fascinated by topics like KeyChain in iOS systems and facial recognition. <br /> <br />
                 <span style={tab} />
                 With all of that being said, I am flexible and would enjoy helping any company where I can.
             </p>
@@ -129,13 +129,13 @@ const InterestsList = () => {
             <h1 style={header}>Personal Interests</h1>
             <p style={paragraph}>
                 <span style={tab} />
-                Outside of my professional endeavors, I have a multitude of personal interests. <br />
+                Outside of my professional endeavors, I have a multitude of personal interests. <br /> <br />
                 <span style={tab} />
                 I've been an avid fan of video games since childhood, 
                 finding relaxation in the laid-back atmosphere of Terraria, the replay value of Call of Duty Zombies and Binding of Isaac, 
-                and the intricate design of Borderlands 2. <br />
+                and the intricate design of Borderlands 2. <br /> <br />
                 <span style={tab} />
-                Recently, I've incorporated weightlifting into my daily routine, kickstarting each day with a productive session. <br />
+                Recently, I've incorporated weightlifting into my daily routine, kickstarting each day with a productive session. <br /> <br />
                 <span style={tab} />
                 Furthermore, I find enjoyment in following the Chicago Bears in the NFL and the Oklahoma City Thunder in the NBA.
             </p>

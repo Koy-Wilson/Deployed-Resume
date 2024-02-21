@@ -1,4 +1,4 @@
-@import url("./assets/fonts/Pixelify_Sans/fonts.css");
+@import url("./assets/fonts/Minecraft/font.css");
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -39,7 +39,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow: hidden;
-  font-family: 'Pixelify';
+  font-family: 'Minecraft';
   background: var(--color-ou);
 }
 

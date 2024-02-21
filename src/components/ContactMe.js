@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Envelope from "../assets/images/Envelope.png";
 import Image from "./Image";
 import Phone from "../assets/images/Phone.png";
@@ -7,6 +7,8 @@ import Resume from "../assets/Resume.pdf";
 import ResumeImage from "../assets/images/Resume.png"
 
 const ContactMe = () => {
+    const [isHovered, setIsHovered] = useState(false)
+
     const desktopBackground = {
         position: "fixed",
         bottom: "0",
@@ -71,14 +73,6 @@ const ContactMe = () => {
         margin: "0"
     }
 
-    const handleHover = (e) => {
-        e.target.style.transform = "scale(1.5)";
-    };
-
-    const handleHoverOut = (e) => {
-        e.target.style.transform = "scale(1)";
-    };
-
     const text = {
         fontSize: isMobile ? "8px" : "16px",
         marginLeft: "2.5%",
@@ -96,19 +90,23 @@ const ContactMe = () => {
                         koyman41@gmail.com
                     </p>
                 </div>
-                <div style={resumeLink}>
+                <div style={Object.assign({}, child)}>
                     <a 
                         href={Resume}
                         rel="noreferrer"
                         target="_blank"
-                        onMouseEnter={handleHover}
-                        onMouseLeave={handleHoverOut}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                        style={{ transition: "transform 0.3s ease-in-out", transform: isHovered ? 'scale(1.5)' : 'scale(1)'}}
                     >
                         <Image
                             style={imageStyle}
                             file={ResumeImage}
                         />
                     </a>
+                    <p style={text}>
+                        Resume
+                    </p>
                 </div>
                 <div style={Object.assign({}, child, {})}>
                     <Image

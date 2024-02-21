@@ -85,9 +85,9 @@ const AccomplishmentList = () => {
           <h1 style={header}>President's Honor Roll: Fall 2023</h1>
           <p style={paragraph}>
             <span style={tab} />
-            I was honored to be included in the University of Oklahoma's President's Honor Roll for the Fall 2023 semester, among a total of 4,290 students. <br />
+            I was honored to be included in the University of Oklahoma's President's Honor Roll for the Fall 2023 semester, among a total of 4,290 students. <br /> <br />
             <span style={tab} />
-            This semester marked the conclusion of my undergraduate studies, culminating in the attainment of my bachelor's degree in December 2023. <br />
+            This semester marked the conclusion of my undergraduate studies, culminating in the attainment of my bachelor's degree in December 2023. <br /> <br />
             <span style={tab} />
             Among the courses I undertook during this period were Mentored Research Experience, Data Networks, Capstone, and Parallel Distributed Networking Programming.
           </p>
@@ -98,9 +98,9 @@ const AccomplishmentList = () => {
           <h1 style={header}>Intern MVP: Paycom</h1>
           <p style={paragraph}>
             <span style={tab} />
-            I had the privilege of being chosen as one of the 11 interns to receive the Paycom MVP designation. <br />
+            I had the privilege of being chosen as one of the 11 interns to receive the Paycom MVP designation. <br /> <br />
             <span style={tab} />
-            Out of a pool of 198 interns, I was selected for demonstrating exceptional dedication and performance throughout my summer internship. <br />
+            Out of a pool of 198 interns, I was selected for demonstrating exceptional dedication and performance throughout my summer internship. <br /> <br />
             <span style={tab} />
             The selection process was conducted by our full-time mentors, and I am truly grateful for this recognition among such a talented group of interns.
           </p>
@@ -109,9 +109,9 @@ const AccomplishmentList = () => {
           <h1 style={header}>President's Honor Roll: Spring 2023</h1>
           <p style={paragraph}>
             <span style={tab} />
-            I was honored to be included on the President's Honor Roll for the Spring 2023 semester, alongside 3,832 fellow students. <br />
+            I was honored to be included on the President's Honor Roll for the Spring 2023 semester, alongside 3,832 fellow students. <br /> <br />
             <span style={tab} />
-            This semester presented significant challenges, notably due to my enrollment in 18 credit hours. <br />
+            This semester presented significant challenges, notably due to my enrollment in 18 credit hours. <br /> <br />
             <span style={tab} />
             Among the demanding courses I undertook were 
             Applied Statistical Methods, Blockchains & Cryptocurrencies, Computer Security, Algorithm Analysis, and Theory of Computation.
@@ -124,9 +124,9 @@ const AccomplishmentList = () => {
           <p style={paragraph}>
             <span style={tab} />
             Enrolled in the President's Honor Roll for the Fall 2022 semester among 4,007 students, 
-            I immersed myself in coursework focusing on professional programming environments. <br />
+            I immersed myself in coursework focusing on professional programming environments. <br /> <br />
             <span style={tab} />
-            Among these classes were Database Management Systems, Software Engineering, and Intro to Operating Systems.  <br />
+            Among these classes were Database Management Systems, Software Engineering, and Intro to Operating Systems.  <br /> <br />
             <span style={tab} />
             Throughout these courses, I engaged in numerous projects designed to simulate the development of enterprise-level software applications, 
             providing valuable hands-on experience in real-world scenarios.
@@ -136,11 +136,11 @@ const AccomplishmentList = () => {
           <h1 style={header}> President's Honor Roll: Spring 2022</h1>
           <p style={paragraph}>
             <span style={tab} />
-            I was privileged to be among the 3,515 students recognized on the President's Honor Roll for the Spring 2022 semester. <br />
+            I was privileged to be among the 3,515 students recognized on the President's Honor Roll for the Spring 2022 semester. <br /> <br />
             <span style={tab} />
-            This semester marked the beginning of my exploration into the foundational aspects of programming. <br />
+            This semester marked the beginning of my exploration into the foundational aspects of programming. <br /> <br />
             <span style={tab} />
-            My demanding coursework encompassed subjects such as Data Structures, Computer Organization, and Linear Algebra. <br />
+            My demanding coursework encompassed subjects such as Data Structures, Computer Organization, and Linear Algebra. <br /> <br />
             <span style={tab} />
             These courses have enhanced my cognitive abilities, with many of the concepts proving invaluable in interviews and personal projects.
           </p>
@@ -151,7 +151,7 @@ const AccomplishmentList = () => {
           <h1 style={header}>President's Honor Roll: Spring 2021</h1>
           <p style={paragraph}>
             <span style={tab} />
-            I achieved recognition on the University of Oklahoma's President's Honor Roll for the Fall 2021 semester, among a cohort of 3,818 outstanding students. <br />
+            I achieved recognition on the University of Oklahoma's President's Honor Roll for the Fall 2021 semester, among a cohort of 3,818 outstanding students. <br /> <br />
             <span style={tab} />
             During this semester, I delved deeply into the technical aspects of computing, 
             tackling challenging coursework including Calculus II, Physics, and Discrete Mathematics, further enriching my academic journey.
@@ -161,9 +161,9 @@ const AccomplishmentList = () => {
           <h1 style={header}>President's Honor Roll: Fall 2020</h1>
           <p style={paragraph}>
             <span style={tab} />
-            I earned a place on the University of Oklahoma's President's Honor Roll for the Fall 2020 semester, among 4,137 students recognized. <br />
+            I earned a place on the University of Oklahoma's President's Honor Roll for the Fall 2020 semester, among 4,137 students recognized. <br /> <br />
             <span style={tab} />
-            This honor required maintaining an "A" grade in all courses while enrolled in a minimum of 12 credit hours. <br />
+            This honor required maintaining an "A" grade in all courses while enrolled in a minimum of 12 credit hours. <br /> <br />
             <span style={tab} />
             Despite facing challenges, including the transition to online learning, I successfully navigated through this period, 
             demonstrating resilience and commitment to academic excellence.
@@ -176,12 +176,12 @@ const AccomplishmentList = () => {
           <p style={paragraph}>
             <span style={tab} />
             I was awarded a scholarship to the University of Oklahoma in
-            recognition of my achievements in high school. <br />
+            recognition of my achievements in high school. <br /> <br />
             <span style={tab} />
             To qualify as a distinguished scholar, I needed to meet specific
             criteria, such as scoring 29-30 on the ACT or 1330-1380 on the SAT,
-            and maintaining a GPA of 3.5 or being in the top 10% of my class.{" "}
-            <br />
+            and maintaining a GPA of 3.5 or being in the top 10% of my class.
+            <br /> <br />
             <span style={tab} />This scholarship served as a motivating
             factor for me throughout my college journey, highlighting the
             significance of academic excellence.

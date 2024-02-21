@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ButtonGroup from "./ButtonGroup";
 import Image from "./Image";
 import GitHub from "../assets/images/github.jpg";
@@ -8,12 +8,22 @@ import Instagram from "../assets/images/instagram.jpg";
 import { isMobile } from "react-device-detect";
 
 const NavBar = ({ page }) => {
+    const [hoveredGitHub, setHoveredGitHub] = useState(false);
+    const [hoveredGitLab, setHoveredGitLab] = useState(false);
+    const [hoveredLinkedIn, setHoveredLinkedIn] = useState(false);
+    const [hoveredInstagram, setHoveredInstagram] = useState(false);
+
     const imageStyle = {
         width: "100%",
         height: "100%",
         transition: "transform 0.3s ease-in-out",
     };
 
+    const getHoverStyle = (isHovered) => ({
+        transition: "transform 0.3s ease-in-out",
+        transform: isHovered ? "scale(1.5)" : "scale(1)",
+    });
+    
     const navButtons = {
         display: "flex",
         justifyContent: "spaceBetween",
@@ -23,7 +33,7 @@ const NavBar = ({ page }) => {
         justifyContent: "center",
         borderRadius: "0 0 8px 8px"
     };
-
+    
     const leftLinks = {
         display: "flex",
         justifyContent: "space-between",
@@ -33,7 +43,7 @@ const NavBar = ({ page }) => {
         justifyContent: "center",
         objectFit: "contain",
     };
-
+    
     const desktopBackground = {
         position: "fixed",
         top: "0",
@@ -47,7 +57,7 @@ const NavBar = ({ page }) => {
         borderRadius: "0 0 8px 8px",
         width: "75%"
     };
-
+    
     const mobileBackground = {
         position: "fixed",
         top: "0",
@@ -62,7 +72,7 @@ const NavBar = ({ page }) => {
         width: "100%",
         overflowX: "auto",
     }
-
+    
     const rightLinks = {
         display: "flex",
         objectFit: "contain",
@@ -72,44 +82,36 @@ const NavBar = ({ page }) => {
         alignItems: "center",
         justifyContent: "center",
     };
-
+    
     const anchorStyle = {
         margin: "0px 20px 0px 20px"
     };
 
-    const handleHover = (e) => {
-        e.target.style.transform = "scale(1.5)";
-    };
-
-    const handleHoverOut = (e) => {
-        e.target.style.transform = "scale(1)";
-    };
-
-    return(
+    return (
         <div style={isMobile ? mobileBackground : desktopBackground}>
             <div style={leftLinks}>
-                <a 
-                    style={anchorStyle}
-                    href="https://github.com/Koy-Wilson" 
-                    rel="noreferrer" 
+                <a
+                    style={{ ...anchorStyle, ...getHoverStyle(hoveredGitHub) }}
+                    href="https://github.com/Koy-Wilson"
+                    rel="noreferrer"
                     target="_blank"
-                    onMouseEnter={handleHover}
-                    onMouseLeave={handleHoverOut}
+                    onMouseEnter={() => setHoveredGitHub(true)}
+                    onMouseLeave={() => setHoveredGitHub(false)}
                 >
-                    <Image 
+                    <Image
                         style={imageStyle}
                         file={GitHub}
                     />
                 </a>
-                <a 
-                    style={anchorStyle}
-                    href="https://gitlab.com/Koy-Wilson" 
-                    rel="noreferrer" 
+                <a
+                    style={{ ...anchorStyle, ...getHoverStyle(hoveredGitLab) }}
+                    href="https://gitlab.com/Koy-Wilson"
+                    rel="noreferrer"
                     target="_blank"
-                    onMouseEnter={handleHover}
-                    onMouseLeave={handleHoverOut}
+                    onMouseEnter={() => setHoveredGitLab(true)}
+                    onMouseLeave={() => setHoveredGitLab(false)}
                 >
-                    <Image 
+                    <Image
                         style={imageStyle}
                         file={GitLab}
                     />
@@ -119,26 +121,26 @@ const NavBar = ({ page }) => {
                 <ButtonGroup page={page} />
             </div>
             <div style={rightLinks}>
-                <a 
-                    style={anchorStyle}
-                    href="https://www.linkedin.com/in/koy-wilson-a429b821a/" 
-                    rel="noreferrer" 
+                <a
+                    style={{ ...anchorStyle, ...getHoverStyle(hoveredLinkedIn) }}
+                    href="https://www.linkedin.com/in/koy-wilson-a429b821a/"
+                    rel="noreferrer"
                     target="_blank"
-                    onMouseEnter={handleHover}
-                    onMouseLeave={handleHoverOut}
+                    onMouseEnter={() => setHoveredLinkedIn(true)}
+                    onMouseLeave={() => setHoveredLinkedIn(false)}
                 >
-                    <Image 
+                    <Image
                         style={imageStyle}
                         file={LinkedIn}
                     />
                 </a>
-                <a 
-                    style={anchorStyle}
-                    href="https://www.instagram.com/koy.wilson/" 
-                    rel="noreferrer" 
+                <a
+                    style={{ ...anchorStyle, ...getHoverStyle(hoveredInstagram) }}
+                    href="https://www.instagram.com/koy.wilson/"
+                    rel="noreferrer"
                     target="_blank"
-                    onMouseEnter={handleHover}
-                    onMouseLeave={handleHoverOut}
+                    onMouseEnter={() => setHoveredInstagram(true)}
+                    onMouseLeave={() => setHoveredInstagram(false)}
                 >
                     <Image
                         style={imageStyle}
