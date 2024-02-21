@@ -3,6 +3,7 @@ import { isMobile } from "react-device-detect";
 
 const ProjectsLists = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [allowScroll, setAllowScroll] = useState(false);
   const parentRef = useRef(null);
 
   useEffect(() => {
@@ -10,8 +11,12 @@ const ProjectsLists = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+          setTimeout(() => {
+            setAllowScroll(true)
+          }, 750)
         } else {
           setIsVisible(false);
+          setAllowScroll(false)
         }
       });
     });
@@ -26,7 +31,7 @@ const ProjectsLists = () => {
       }
     };
   }, []);
-
+  
   const desktopParent = {
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
@@ -39,8 +44,8 @@ const ProjectsLists = () => {
     flexDirection: 'column',
     alignItems: 'center',
     width: '100vw',
-    paddingTop: "20%",
-    paddingBottom: "25%",
+    marginTop: "35%",
+    marginBottom: "25%"
   }
 
   const textHolder = {
@@ -54,6 +59,9 @@ const ProjectsLists = () => {
     boxSizing: "border-box",
     opacity: isVisible ? 1 : 0,
     transition: "opacity 1s ease-in-out",
+    marginTop: isMobile ? "2.5%" : "0%",
+    marginBottom: isMobile ? "2.5%" : "0%",
+    width: isMobile ? "95%" : "100%"
   };
 
   const paragraph = {
@@ -65,7 +73,7 @@ const ProjectsLists = () => {
 
   const containerStyle = {
     height: "100vh",
-    overflowY: "auto",
+    overflowY: allowScroll ? "auto" : "hidden",
   };
 
   const tab = {
@@ -74,7 +82,7 @@ const ProjectsLists = () => {
   };
 
   const header = {
-    fontSize: isMobile ? "20px" : '',
+    fontSize: isMobile ? "30px" : '',
     marginBottom: "-10px"
   }
 

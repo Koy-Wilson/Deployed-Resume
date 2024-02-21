@@ -3,6 +3,7 @@ import { isMobile } from "react-device-detect";
 
 const ExperienceList = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [allowScroll, setAllowScroll] = useState(false);
   const parentRef = useRef(null);
 
   useEffect(() => {
@@ -10,8 +11,12 @@ const ExperienceList = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
+          setTimeout(() => {
+            setAllowScroll(true)
+          }, 750)
         } else {
           setIsVisible(false);
+          setAllowScroll(false)
         }
       });
     });
@@ -39,8 +44,8 @@ const ExperienceList = () => {
     flexDirection: 'column',
     alignItems: 'center',
     width: '100vw',
-    paddingTop: "20%",
-    paddingBottom: "25%",
+    marginTop: "35%",
+    marginBottom: "25%"
   }
 
   const textHolder = {
@@ -54,18 +59,21 @@ const ExperienceList = () => {
     boxSizing: "border-box",
     opacity: isVisible ? 1 : 0,
     transition: "opacity 1s ease-in-out",
+    marginTop: isMobile ? "2.5%" : "0%",
+    marginBottom: isMobile ? "2.5%" : "0%",
+    width: isMobile ? "95%" : "100%"
   };
 
   const paragraph = {
     textAlign: "left",
-    fontSize: isMobile ? "14px" : "20px",
+    fontSize: "20px",
     marginLeft: "5%",
     marginRight: "5%",
   };
 
   const containerStyle = {
     height: "100vh",
-    overflowY: "auto",
+    overflowY: allowScroll ? "auto" : "hidden",
   };
 
   const tab = {
@@ -74,7 +82,7 @@ const ExperienceList = () => {
   };
 
   const header = {
-    fontSize: isMobile ? "20px" : '',
+    fontSize: isMobile ? "30px" : '',
     marginBottom: "-10px"
   }
 

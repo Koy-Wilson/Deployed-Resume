@@ -20,7 +20,8 @@ const ContactMe = () => {
         padding: "10px 10px",
         margin: "0 auto",
         borderRadius: "8px 8px 0 0",
-        width: "75%"
+        width: "75%",
+        zIndex: "2"
     };
 
     const mobileBackground = {
@@ -34,7 +35,8 @@ const ContactMe = () => {
         padding: "10px 10px",
         margin: "0 auto",
         borderRadius: "8px 8px 0 0",
-        width: "100%"
+        width: "100%",
+        zIndex: "2"
     }
 
     const imageStyle = {
@@ -49,15 +51,6 @@ const ContactMe = () => {
         display: "flex",
         justifyContent: "space-between",
         width: "100vw",
-    }
-
-    const resumeLink = {
-        display: "flex",
-        padding: "10px 20px",
-        margin: "0 auto",
-        alignItems: "center",
-        justifyContent: "center",
-        borderRadius: "0 0 8px 8px"
     }
 
     const child = {

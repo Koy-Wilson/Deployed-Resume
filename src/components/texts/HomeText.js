@@ -19,17 +19,19 @@ const HomeText = () => {
         opacity: showRightChild ? 1 : 0,
         borderRadius: "10px",
         border: "4px solid black",
+        zIndex: 1
     }
 
     const rightChild = {
-        width: "100%",
+        width: isMobile ? "95%" : "100%",
         objectFit: "contain",
         marginRight: "5%",
-        marginLeft: "5%",
+        marginLeft: "2.5%",
     }
 
     const leftChild = {
-        width: "100%",
+        width: isMobile ? "95%" : "100%",
+        marginBottom: isMobile ? "5%" : "0%",
         marginLeft: isMobile ? "" : "5%",
         transition: "transform 1s ease-in-out",
         transform: showLeftChild ? "translateX(0)" : "translateX(-100vw)",
@@ -46,7 +48,6 @@ const HomeText = () => {
         justifyContent: "space-between",
         width: "100vw",
         paddingTop: "10%",
-        overflowY: "auto"
     }
 
     const mobileParent = {
@@ -55,8 +56,7 @@ const HomeText = () => {
         alignItems: 'center',
         width: "100vw",
         marginTop: "35%",
-        height: "90vh",
-        overflowY: "auto"
+        marginBottom: "25%",
     }
 
     const desktopStyle = {
@@ -66,14 +66,16 @@ const HomeText = () => {
     }
 
     const mobileStyle = {
-        fontSize: "14px",
+        fontSize: "20px",
         alignItems: "center",
         margin: "5%",
     }
 
     const containerStyle = {
         height: "100vh",
-        overflowY: "auto"
+        overflowY: "auto",
+        position: "relative",
+        zIndex: 1,
     }
 
     return(
@@ -81,12 +83,12 @@ const HomeText = () => {
             <div style={isMobile ? mobileParent : desktopParent}>
                 <div style={leftChild}>
                     <p style={isMobile ? mobileStyle : desktopStyle}>
-                        Hello there!<br /> <br />
-                        Welcome to my resume website. 
-                        My name is Koy Wilson, and I'm currently pursuing my graduate studies at the University of Oklahoma. 
-                        I anticipate completing my Master's degree in computer science by December 2024, 
-                        building upon the foundation of my Bachelor's degree in computer science, which I earned in December 2023. <br /> <br />
-                        Please feel free to explore my page to learn more about my academic background, professional experience, and skill set. Thank you for visiting!
+                    Hello there!<br /> <br />
+                    Welcome to my resume website. 
+                    My name is Koy Wilson, and I'm currently pursuing my graduate studies at the University of Oklahoma. 
+                    I anticipate completing my Master's degree in computer science by December 2024, 
+                    building upon the foundation of my Bachelor's degree in computer science, which I earned in December 2023. <br /> <br />
+                    Please feel free to explore my page to learn more about my academic background, professional experience, and skill set. Thank you for visiting!
                     </p>
                 </div>
                 <div style={rightChild}>

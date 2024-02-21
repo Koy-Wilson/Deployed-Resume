@@ -55,7 +55,8 @@ const NavBar = ({ page }) => {
         padding: "10px 10px",
         margin: "0 auto",
         borderRadius: "0 0 8px 8px",
-        width: "75%"
+        width: "75%",
+        zIndex: "2"
     };
     
     const mobileBackground = {
@@ -71,6 +72,7 @@ const NavBar = ({ page }) => {
         borderRadius: "0 0 8px 8px",
         width: "100%",
         overflowX: "auto",
+        zIndex: "2",
     }
     
     const rightLinks = {
@@ -89,65 +91,69 @@ const NavBar = ({ page }) => {
 
     return (
         <div style={isMobile ? mobileBackground : desktopBackground}>
-            <div style={leftLinks}>
-                <a
-                    style={{ ...anchorStyle, ...getHoverStyle(hoveredGitHub) }}
-                    href="https://github.com/Koy-Wilson"
-                    rel="noreferrer"
-                    target="_blank"
-                    onMouseEnter={() => setHoveredGitHub(true)}
-                    onMouseLeave={() => setHoveredGitHub(false)}
-                >
-                    <Image
-                        style={imageStyle}
-                        file={GitHub}
-                    />
-                </a>
-                <a
-                    style={{ ...anchorStyle, ...getHoverStyle(hoveredGitLab) }}
-                    href="https://gitlab.com/Koy-Wilson"
-                    rel="noreferrer"
-                    target="_blank"
-                    onMouseEnter={() => setHoveredGitLab(true)}
-                    onMouseLeave={() => setHoveredGitLab(false)}
-                >
-                    <Image
-                        style={imageStyle}
-                        file={GitLab}
-                    />
-                </a>
-            </div>
+            {!isMobile && 
+                        <div style={leftLinks}>
+                        <a
+                            style={{ ...anchorStyle, ...getHoverStyle(hoveredGitHub) }}
+                            href="https://github.com/Koy-Wilson"
+                            rel="noreferrer"
+                            target="_blank"
+                            onMouseEnter={() => setHoveredGitHub(true)}
+                            onMouseLeave={() => setHoveredGitHub(false)}
+                        >
+                            <Image
+                                style={imageStyle}
+                                file={GitHub}
+                            />
+                        </a>
+                        <a
+                            style={{ ...anchorStyle, ...getHoverStyle(hoveredGitLab) }}
+                            href="https://gitlab.com/Koy-Wilson"
+                            rel="noreferrer"
+                            target="_blank"
+                            onMouseEnter={() => setHoveredGitLab(true)}
+                            onMouseLeave={() => setHoveredGitLab(false)}
+                        >
+                            <Image
+                                style={imageStyle}
+                                file={GitLab}
+                            />
+                        </a>
+                    </div>
+            }
             <div style={navButtons}>
                 <ButtonGroup page={page} />
             </div>
-            <div style={rightLinks}>
-                <a
-                    style={{ ...anchorStyle, ...getHoverStyle(hoveredLinkedIn) }}
-                    href="https://www.linkedin.com/in/koy-wilson-a429b821a/"
-                    rel="noreferrer"
-                    target="_blank"
-                    onMouseEnter={() => setHoveredLinkedIn(true)}
-                    onMouseLeave={() => setHoveredLinkedIn(false)}
-                >
-                    <Image
-                        style={imageStyle}
-                        file={LinkedIn}
-                    />
-                </a>
-                <a
-                    style={{ ...anchorStyle, ...getHoverStyle(hoveredInstagram) }}
-                    href="https://www.instagram.com/koy.wilson/"
-                    rel="noreferrer"
-                    target="_blank"
-                    onMouseEnter={() => setHoveredInstagram(true)}
-                    onMouseLeave={() => setHoveredInstagram(false)}
-                >
-                    <Image
-                        style={imageStyle}
-                        file={Instagram}
-                    />
-                </a>
-            </div>
+            {!isMobile && 
+                        <div style={rightLinks}>
+                        <a
+                            style={{ ...anchorStyle, ...getHoverStyle(hoveredLinkedIn) }}
+                            href="https://www.linkedin.com/in/koy-wilson-a429b821a/"
+                            rel="noreferrer"
+                            target="_blank"
+                            onMouseEnter={() => setHoveredLinkedIn(true)}
+                            onMouseLeave={() => setHoveredLinkedIn(false)}
+                        >
+                            <Image
+                                style={imageStyle}
+                                file={LinkedIn}
+                            />
+                        </a>
+                        <a
+                            style={{ ...anchorStyle, ...getHoverStyle(hoveredInstagram) }}
+                            href="https://www.instagram.com/koy.wilson/"
+                            rel="noreferrer"
+                            target="_blank"
+                            onMouseEnter={() => setHoveredInstagram(true)}
+                            onMouseLeave={() => setHoveredInstagram(false)}
+                        >
+                            <Image
+                                style={imageStyle}
+                                file={Instagram}
+                            />
+                        </a>
+                    </div>
+            }
         </div>
     );
 };
