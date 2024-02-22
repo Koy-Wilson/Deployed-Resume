@@ -49,7 +49,7 @@ const HomeText = () => {
         justifyContent: "space-between",
         width: "100vw",
         marginTop: "10%",
-        marginBottom: "30%"
+        marginBottom: "10%"
     }
 
     const mobileParent = {
