@@ -5,6 +5,7 @@ import GitHub from "../assets/images/github.jpg";
 import GitLab from "../assets/images/gitlab.jpg";
 import LinkedIn from "../assets/images/linkedin.jpg";
 import Instagram from "../assets/images/instagram.jpg";
+import DropDown from "../assets/images/dropdown.png";
 import { isMobile } from "react-device-detect";
 
 const NavBar = ({ page }) => {
@@ -12,6 +13,10 @@ const NavBar = ({ page }) => {
     const [hoveredGitLab, setHoveredGitLab] = useState(false);
     const [hoveredLinkedIn, setHoveredLinkedIn] = useState(false);
     const [hoveredInstagram, setHoveredInstagram] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+
 
     const imageStyle = {
         width: "100%",
@@ -65,7 +70,9 @@ const NavBar = ({ page }) => {
         left: "50%",
         transform: "translateX(-50%)",
         display: "flex",
-        justifyContent: "spaceBetween",
+        flexDirection: "column", 
+        alignItems: "center",
+        justifyContent: "center",
         backgroundColor: "var(--color-navbar)",
         padding: "10px 10px",
         margin: "0 auto",
@@ -73,7 +80,7 @@ const NavBar = ({ page }) => {
         width: "100%",
         overflowX: "auto",
         zIndex: "2",
-    }
+    };
     
     const rightLinks = {
         display: "flex",
@@ -89,70 +96,99 @@ const NavBar = ({ page }) => {
         margin: "0px 20px 0px 20px"
     };
 
+    const dropdownIconStyle = {
+        cursor: 'pointer',
+        width: '30px',
+        height: '30px',
+    };
+
+    const dropdownContainerStyle = {
+        overflow: 'hidden',
+        transition: 'max-height 0.3s ease-in-out',
+        maxHeight: isDropdownOpen ? '500px' : '0',
+    };
+
     return (
-        <div style={isMobile ? mobileBackground : desktopBackground}>
-            {!isMobile && 
+        <div>
+            {isMobile 
+                ? 
+                (
+                    <div style={mobileBackground}>
+                        <div style={{...navButtons, ...dropdownContainerStyle}}>
+                            {isDropdownOpen && <ButtonGroup page={page} />}
+                        </div>
+                        <img
+                            src={DropDown}
+                            alt="Dropdown"
+                            style={dropdownIconStyle}
+                            onClick={toggleDropdown}
+                        />
+                    </div>
+                )
+                :
+                (
+                    <div style={desktopBackground}>
                         <div style={leftLinks}>
-                        <a
-                            style={{ ...anchorStyle, ...getHoverStyle(hoveredGitHub) }}
-                            href="https://github.com/Koy-Wilson"
-                            rel="noreferrer"
-                            target="_blank"
-                            onMouseEnter={() => setHoveredGitHub(true)}
-                            onMouseLeave={() => setHoveredGitHub(false)}
-                        >
-                            <Image
-                                style={imageStyle}
-                                file={GitHub}
-                            />
-                        </a>
-                        <a
-                            style={{ ...anchorStyle, ...getHoverStyle(hoveredGitLab) }}
-                            href="https://gitlab.com/Koy-Wilson"
-                            rel="noreferrer"
-                            target="_blank"
-                            onMouseEnter={() => setHoveredGitLab(true)}
-                            onMouseLeave={() => setHoveredGitLab(false)}
-                        >
-                            <Image
-                                style={imageStyle}
-                                file={GitLab}
-                            />
-                        </a>
-                    </div>
-            }
-            <div style={navButtons}>
-                <ButtonGroup page={page} />
-            </div>
-            {!isMobile && 
+                            <a
+                                style={{ ...anchorStyle, ...getHoverStyle(hoveredGitHub) }}
+                                href="https://github.com/Koy-Wilson"
+                                rel="noreferrer"
+                                target="_blank"
+                                onMouseEnter={() => setHoveredGitHub(true)}
+                                onMouseLeave={() => setHoveredGitHub(false)}
+                            >
+                                <Image
+                                    style={imageStyle}
+                                    file={GitHub}
+                                />
+                            </a>
+                            <a
+                                style={{ ...anchorStyle, ...getHoverStyle(hoveredGitLab) }}
+                                href="https://gitlab.com/Koy-Wilson"
+                                rel="noreferrer"
+                                target="_blank"
+                                onMouseEnter={() => setHoveredGitLab(true)}
+                                onMouseLeave={() => setHoveredGitLab(false)}
+                            >
+                                <Image
+                                    style={imageStyle}
+                                    file={GitLab}
+                                />
+                            </a>
+                        </div>
+                        <div style={navButtons}>
+                            <ButtonGroup page={page} />
+                        </div>
                         <div style={rightLinks}>
-                        <a
-                            style={{ ...anchorStyle, ...getHoverStyle(hoveredLinkedIn) }}
-                            href="https://www.linkedin.com/in/koy-wilson-a429b821a/"
-                            rel="noreferrer"
-                            target="_blank"
-                            onMouseEnter={() => setHoveredLinkedIn(true)}
-                            onMouseLeave={() => setHoveredLinkedIn(false)}
-                        >
-                            <Image
-                                style={imageStyle}
-                                file={LinkedIn}
-                            />
-                        </a>
-                        <a
-                            style={{ ...anchorStyle, ...getHoverStyle(hoveredInstagram) }}
-                            href="https://www.instagram.com/koy.wilson/"
-                            rel="noreferrer"
-                            target="_blank"
-                            onMouseEnter={() => setHoveredInstagram(true)}
-                            onMouseLeave={() => setHoveredInstagram(false)}
-                        >
-                            <Image
-                                style={imageStyle}
-                                file={Instagram}
-                            />
-                        </a>
+                            <a
+                                style={{ ...anchorStyle, ...getHoverStyle(hoveredLinkedIn) }}
+                                href="https://www.linkedin.com/in/koy-wilson-a429b821a/"
+                                rel="noreferrer"
+                                target="_blank"
+                                onMouseEnter={() => setHoveredLinkedIn(true)}
+                                onMouseLeave={() => setHoveredLinkedIn(false)}
+                            >
+                                <Image
+                                    style={imageStyle}
+                                    file={LinkedIn}
+                                />
+                            </a>
+                            <a
+                                style={{ ...anchorStyle, ...getHoverStyle(hoveredInstagram) }}
+                                href="https://www.instagram.com/koy.wilson/"
+                                rel="noreferrer"
+                                target="_blank"
+                                onMouseEnter={() => setHoveredInstagram(true)}
+                                onMouseLeave={() => setHoveredInstagram(false)}
+                            >
+                                <Image
+                                    style={imageStyle}
+                                    file={Instagram}
+                                />
+                            </a>
+                        </div>
                     </div>
+                ) 
             }
         </div>
     );

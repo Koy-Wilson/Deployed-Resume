@@ -44,7 +44,7 @@ const ExperienceList = () => {
     flexDirection: 'column',
     alignItems: 'center',
     width: '100vw',
-    marginTop: "40%",
+    marginTop: "30%",
     marginBottom: "40%",
   }
 

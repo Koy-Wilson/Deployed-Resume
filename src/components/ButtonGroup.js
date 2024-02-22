@@ -3,7 +3,7 @@ import ButtonLink from "./ButtonLink";
 import { isMobile } from "react-device-detect";
 
 const ButtonGroup = ({ page }) => {
-    const pages = [ 
+    const pages = [
         {
             "page": "Home",
             "route": "/",
@@ -31,14 +31,16 @@ const ButtonGroup = ({ page }) => {
         }
     ];
 
-    const mobileButtons = {
-        display: 'flex', 
+    // Adjusted style for mobile (vertical layout) and desktop (horizontal layout)
+    const containerStyle = {
+        display: 'flex',
+        flexDirection: isMobile ? "column" : "row", // Column layout for mobile, row for desktop
         gap: '5px',
-        overflowX: "auto"
-    }
+        overflowY: isMobile ? "auto" : "hidden" // Enable vertical scrolling on mobile if needed
+    };
 
     return (
-        <div style={isMobile ? mobileButtons : {}}>
+        <div style={containerStyle}>
             {pages.map(option => (
                 <ButtonLink
                     key={option.page}

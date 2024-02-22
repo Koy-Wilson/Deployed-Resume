@@ -27,6 +27,7 @@ const HomeText = () => {
         objectFit: "contain",
         marginRight: "5%",
         marginLeft: "2.5%",
+        marginTop: isMobile ? "0%" : "2.5%"
     }
 
     const leftChild = {
@@ -47,7 +48,8 @@ const HomeText = () => {
         display: "flex",
         justifyContent: "space-between",
         width: "100vw",
-        paddingTop: "10%",
+        marginTop: "10%",
+        marginBottom: "30%"
     }
 
     const mobileParent = {
@@ -55,18 +57,12 @@ const HomeText = () => {
         flexDirection: 'column',
         alignItems: 'center',
         width: "100vw",
-        marginTop: "40%",
+        marginTop: "30%",
         marginBottom: "40%",
     }
 
-    const desktopStyle = {
-        fontSize: "26px",
-        alignItems: "center",
-        margin: "5%",
-    }
-
-    const mobileStyle = {
-        fontSize: "20px",
+    const paragraph = {
+        fontSize: isMobile ? "20px" : "26px",
         alignItems: "center",
         margin: "5%",
     }
@@ -82,7 +78,7 @@ const HomeText = () => {
         <div style={containerStyle}>
             <div style={isMobile ? mobileParent : desktopParent}>
                 <div style={leftChild}>
-                    <p style={isMobile ? mobileStyle : desktopStyle}>
+                    <p style={paragraph}>
                     Hello there!<br /> <br />
                     Welcome to my resume website. 
                     My name is Koy Wilson, and I'm currently pursuing my graduate studies at the University of Oklahoma. 
