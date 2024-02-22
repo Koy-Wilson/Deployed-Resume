@@ -100,15 +100,6 @@ const NavBar = ({ page }) => {
         paddingTop: "2.5%"
     };
 
-    const dropdownContentStyle = {
-        display: isDropdownOpen ? 'flex' : 'none',
-        flexDirection: 'column',
-        alignItems: 'center',
-        backgroundColor: "var(--color-navbar)",
-        width: '100%',
-        paddingTop: '10px',
-    };
-
     const columnStyle = {
         display: 'flex',
         flexDirection: 'column',
@@ -122,18 +113,22 @@ const NavBar = ({ page }) => {
         marginBottom: "50%"
     };
 
-    const mobileLayoutStyle = {
+    const dropDownContainerStyle = {
+        overflow: 'hidden',
+        width: "100%",
+        transition: "max-height 0.3s ease-in-out",
+        maxHeight: isDropdownOpen ? '500px' : '0',
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-evenly',
-        width: '100%',
-    };
+        justifyContent: 'center',
+        paddingTop: '10px',
+        backgroundColor: "var(--color-navbar)",
+    }
 
     return (
         <div style={isMobile ? mobileBackground : desktopBackground}>
             {isMobile ? (
-                <div style={dropdownContentStyle}>
-                    <div style={{...mobileLayoutStyle, display: isDropdownOpen ? 'flex' : 'none'}}>
+                <div style={dropDownContainerStyle}>
                         <div style={columnStyle}>
                             <a 
                                 href="https://github.com/Koy-Wilson" 
@@ -181,7 +176,6 @@ const NavBar = ({ page }) => {
                                     style={imageStyle} />
                             </a>
                         </div>
-                    </div>
                 </div>
             ) : (
                 <>

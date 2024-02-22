@@ -57,8 +57,8 @@ const HomeText = () => {
         flexDirection: 'column',
         alignItems: 'center',
         width: "100vw",
-        marginTop: "30%",
-        marginBottom: "40%",
+        marginTop: "20%",
+        marginBottom: "30%",
     }
 
     const paragraph = {

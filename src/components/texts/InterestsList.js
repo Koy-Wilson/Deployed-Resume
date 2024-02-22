@@ -44,8 +44,8 @@ const InterestsList = () => {
     flexDirection: 'column',
     alignItems: 'center',
     width: '100vw',
-    marginTop: "10%",
-    marginBottom: "10%",
+    marginTop: "20%",
+    marginBottom: "30%",
   }
 
   const textHolder = {
