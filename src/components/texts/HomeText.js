@@ -27,7 +27,6 @@ const HomeText = () => {
         objectFit: "contain",
         marginRight: "5%",
         marginLeft: "2.5%",
-        marginTop: isMobile ? "0%" : "2.5%"
     }
 
     const leftChild = {

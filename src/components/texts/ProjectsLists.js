@@ -3,7 +3,6 @@ import { isMobile } from "react-device-detect";
 
 const ProjectsLists = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [allowScroll, setAllowScroll] = useState(false);
   const parentRef = useRef(null);
 
   useEffect(() => {
@@ -11,12 +10,8 @@ const ProjectsLists = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          setTimeout(() => {
-            setAllowScroll(true)
-          }, 750)
         } else {
           setIsVisible(false);
-          setAllowScroll(false)
         }
       });
     });
@@ -73,7 +68,7 @@ const ProjectsLists = () => {
 
   const containerStyle = {
     height: "100vh",
-    overflowY: allowScroll ? "auto" : "hidden",
+    overflowY: "auto",
   };
 
   const tab = {
