@@ -6,6 +6,7 @@ import { isMobile } from "react-device-detect";
 import Resume from "../assets/Resume.pdf";
 import ResumeImage from "../assets/images/Resume.png"
 import PullUp from "../assets/images/pullup.png"
+import DropDown from "../assets/images/dropdown.png";
 
 const ContactMe = () => {
     const [isHovered, setIsHovered] = useState(false)
@@ -98,7 +99,7 @@ const ContactMe = () => {
             (
                 <div style={mobileBackground}>
                     <img
-                        src={PullUp}
+                        src={isPullUpOpen ? DropDown : PullUp}
                         alt="PullUp"
                         style={pullUpIconStyle}
                         onClick={togglePullUp}

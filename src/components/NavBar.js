@@ -6,6 +6,7 @@ import GitLab from "../assets/images/gitlab.jpg";
 import LinkedIn from "../assets/images/linkedin.jpg";
 import Instagram from "../assets/images/instagram.jpg";
 import DropDown from "../assets/images/dropdown.png";
+import PullUp from "../assets/images/pullup.png";
 import { isMobile } from "react-device-detect";
 
 const NavBar = ({ page }) => {
@@ -238,7 +239,7 @@ const NavBar = ({ page }) => {
             )}
             {isMobile && (
                 <img
-                    src={DropDown}
+                    src={isDropdownOpen ? PullUp : DropDown}
                     alt="Dropdown"
                     style={dropdownIconStyle}
                     onClick={toggleDropdown}
