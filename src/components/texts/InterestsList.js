@@ -45,7 +45,7 @@ const InterestsList = () => {
     alignItems: 'center',
     width: '100vw',
     marginTop: "20%",
-    marginBottom: "30%",
+    marginBottom: "40%",
   }
 
   const textHolder = {
