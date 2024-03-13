@@ -110,7 +110,7 @@ const ContactMe = () => {
                                 style={imageStyle}
                                 file={Envelope} />
                             <p style={text}>
-                                koyman41@gmail.com
+                                koy.wilson13@gmail.com
                             </p>
                         </div>
                         <div style={Object.assign({}, child)}>
@@ -148,7 +148,7 @@ const ContactMe = () => {
                                 style={imageStyle}
                                 file={Envelope} />
                             <p style={text}>
-                                koyman41@gmail.com
+                                koy.wilson13@gmail.com
                             </p>
                         </div>
                         <div style={Object.assign({}, child)}>
