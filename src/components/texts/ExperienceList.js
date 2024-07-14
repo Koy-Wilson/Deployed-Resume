@@ -85,6 +85,21 @@ const ExperienceList = () => {
     <div style={containerStyle} ref={parentRef}>
       <div style={isMobile ? mobileParent : desktopParent}>
         <div style={textHolder}>
+            <h1 style={header}>Software Developer - iOS</h1>
+            <h2 style={header}>June 2024-Present</h2>
+            <p style={paragraph}>
+              <span style={tab} />
+              After taking the June 2024 LSAT, I transitioned to working full-time as a software developer on Paycom's iOS app. <br /> <br />
+              <span style={tab} />
+              My prior internship experience made me a strong fit for Paycom's mobile team. 
+              Since joining the team, I have deepened my expertise in SwiftUI and started developing with UIKit. <br /> <br />
+              <span style={tab} />
+              Additionally, I have strengthened my leadership and communication skills.
+            </p>
+        </div>
+        <div />
+        <div />
+        <div style={textHolder}>
             <h1 style={header}>William Kerber Scholar : OU</h1>
             <h2 style={header}>August 2023-Present</h2>
             <p style={paragraph}>
@@ -98,8 +113,6 @@ const ExperienceList = () => {
                 Additionally, I honed secondary skills in communication and mentoring as I assisted students in navigating their academic challenges.
             </p>
         </div>
-        <div />
-        <div />
         <div style={textHolder}>
             <h1 style={header}>Software Developer Intern : Paycom</h1>
             <h2 style={header}>May 2022-August 2023</h2>
@@ -115,6 +128,8 @@ const ExperienceList = () => {
                 a role I was personally selected for by the managerial team within the developer department, which was a remarkable opportunity.
             </p>
         </div>
+        <div />
+        <div />
         <div style={textHolder}>
             <h1 style={header}>Campus Ambassador : Paycom</h1>
             <h2 style={header}>August 2022-December 2023</h2>
@@ -129,8 +144,6 @@ const ExperienceList = () => {
                 and honed my public speaking abilities as I addressed audiences of up to 100 students at a time.
             </p>
         </div>
-        <div />
-        <div />
         <div style={textHolder}>
             <h1 style={header}>Sales/Tech : Computer Connection</h1>
             <h2 style={header}>May 2021-April 2022</h2>
